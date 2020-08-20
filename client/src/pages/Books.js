@@ -46,7 +46,7 @@ function Books() {
       <Row>
         <Col size="md-6">
           <Jumbotron>
-            <h1>What Books Should I Read?</h1>
+            <h1>Search For Developers</h1>
           </Jumbotron>
           <form>
             {/* inputs should be updated to be controlled inputs */}
@@ -78,7 +78,7 @@ function Books() {
         </Col>
         <Col size="md-6 sm-12">
           <Jumbotron>
-            <h1>Books On My List</h1>
+            <h1>Search For Jobs</h1>
           </Jumbotron>
           {books.length ? (
             <List>
