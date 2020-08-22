@@ -1,12 +1,13 @@
 import React from "react";
-import Books from "./pages/Books";
+import Landing from "./pages/Landing";
+// import Books from "./pages/Books";
 import Nav from "./components/Nav";
+// import Splash from "/componets/Splash"
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Books />
+      <Landing />
     </div>
   );
 }
