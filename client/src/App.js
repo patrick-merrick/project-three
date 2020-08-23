@@ -1,13 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 // import Books from "./pages/Books";
 // import Splash from "/componets/Splash"
 
 function App() {
   return (
-    <div>
-      <Landing />
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/" component={Landing} />
+      </div>
+    </Router>
   );
 }
 
