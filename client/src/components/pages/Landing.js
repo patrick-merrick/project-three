@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../../src/components/Nav";
-import Jumbotron from "../../src/components/Jumbotron";
-import { Container } from "../../src/components/Grid";
+import Nav from "../Nav";
+import Jumbotron from "../Jumbotron";
+import { Container } from "../Grid";
 // import Membership from "../../src/Membership";
 // import Signup from "../../src/components/Signup";
 // import Login from "../src/components/Login";
