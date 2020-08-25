@@ -19,9 +19,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
+import ProfileCard from '../ProfileCard';
+import EditProfile from '../EditProfile';
+import PostAd from '../PostAd';
+import AdCard from '../AdCard';
 
 function Copyright() {
   return (
@@ -182,23 +183,31 @@ export default function Dashboard() {
         <List>{secondaryListItems}</List>
       </Drawer>
 
-      {/* <main className={classes.content}>
+
+      <div className={classes.appBarSpacer} />
+
+      {/* Main Window in Dashboard */}
+
+      <main className={classes.content}>
+
+        {/* Developer Gallery Start */}
+
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
-            <Grid item xs={12}>
+        <Container justify="center" maxWidth="lg" className={classes.container}>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+            Developer Gallery
+          </Typography>
+          <div className={classes.appBarSpacer} />
+
+          <Grid justify="center" container spacing={3}>
+            <Grid>
               <Paper className={classes.paper}>
-                <Orders />
+                <ProfileCard />
+              </Paper>
+            </Grid>
+            <Grid>
+              <Paper className={classes.paper}>
+                <ProfileCard />
               </Paper>
             </Grid>
           </Grid>
@@ -206,7 +215,61 @@ export default function Dashboard() {
             <Copyright />
           </Box>
         </Container>
-    </main> */}
-    </div>
+
+        {/* Developer Gallery End */}
+
+        {/* Edit Profile Start */}
+
+        <div className={classes.appBarSpacer} />
+        <Container justify="center" maxWidth="lg" className={classes.container}>
+          <Grid>
+            <EditProfile />
+          </Grid>
+        </Container>
+
+        {/* Edit Profile End */}
+
+        {/* Ad Postings Start */}
+
+        <div className={classes.appBarSpacer} />
+        <Container justify="center" maxWidth="lg" className={classes.container}>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+            Developer Gallery
+          </Typography>
+          <div className={classes.appBarSpacer} />
+
+          <Grid justify="center" container spacing={3}>
+            <Grid>
+              <Paper className={classes.paper}>
+                <AdCard />
+              </Paper>
+            </Grid>
+            <Grid>
+              <Paper className={classes.paper}>
+                <AdCard />
+              </Paper>
+            </Grid>
+          </Grid>
+          <Box pt={4}>
+            <Copyright />
+          </Box>
+        </Container>
+
+        {/* Ad Postings End */}
+
+
+        {/* Post Ad Start */}
+
+        <div className={classes.appBarSpacer} />
+        <Container justify="center" maxWidth="lg" className={classes.container}>
+          <Grid>
+            <PostAd />
+          </Grid>
+        </Container>
+
+        {/* Post Ad End */}
+
+      </main>
+    </div >
   );
 }
