@@ -10,40 +10,55 @@ function NavTabs() {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-        <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+        <Link
+          to="/"
+          className={location.pathname === "/" ? "nav-link active" : "nav-link"}
+        >
           Home
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/about"
-          className={location.pathname === "/about" ? "nav-link active" : "nav-link"}
+          to="/dashboard"
+          className={
+            location.pathname === "/Dashboard" ? "nav-link active" : "nav-link"
+          }
         >
-          About
+          Dashboard
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/blog"
-          className={location.pathname === "/blog" ? "nav-link active" : "nav-link"}
+          to="/profileCard"
+          className={
+            location.pathname === "/profileCard"
+              ? "nav-link active"
+              : "nav-link"
+          }
         >
-          Blog
+          Profiles
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/contact"
-          className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}
+          to="/editProfile"
+          className={
+            location.pathname === "/editProfile"
+              ? "nav-link active"
+              : "nav-link"
+          }
         >
-          Contact
+          Edit
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/contact/learn"
-          className={location.pathname === "/contact/learn" ? "nav-link active" : "nav-link"}
+          to="/postAd"
+          className={
+            location.pathname === "/postAd" ? "nav-link active" : "nav-link"
+          }
         >
-          Learn
+          Ad
         </Link>
       </li>
     </ul>
