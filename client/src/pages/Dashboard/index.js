@@ -19,10 +19,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
-import ProfileCard from '../ProfileCard';
-import EditProfile from '../EditProfile';
-import PostAd from '../PostAd';
-import AdCard from '../AdCard';
+import ProfileCard from "../../components/ProfileCard";
+import EditProfile from "../EditProfile";
+import PostAd from "../PostAd";
+import AdCard from "../../components/AdCard";
 
 function Copyright() {
   return (
@@ -183,18 +183,21 @@ export default function Dashboard() {
         <List>{secondaryListItems}</List>
       </Drawer>
 
-
       <div className={classes.appBarSpacer} />
 
       {/* Main Window in Dashboard */}
 
       <main className={classes.content}>
-
         {/* Developer Gallery Start */}
 
         <div className={classes.appBarSpacer} />
         <Container justify="center" maxWidth="lg" className={classes.container}>
-          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="textPrimary"
+          >
             Developer Gallery
           </Typography>
           <div className={classes.appBarSpacer} />
@@ -233,7 +236,12 @@ export default function Dashboard() {
 
         <div className={classes.appBarSpacer} />
         <Container justify="center" maxWidth="lg" className={classes.container}>
-          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="textPrimary"
+          >
             Developer Gallery
           </Typography>
           <div className={classes.appBarSpacer} />
@@ -257,7 +265,6 @@ export default function Dashboard() {
 
         {/* Ad Postings End */}
 
-
         {/* Post Ad Start */}
 
         <div className={classes.appBarSpacer} />
@@ -268,8 +275,7 @@ export default function Dashboard() {
         </Container>
 
         {/* Post Ad End */}
-
       </main>
-    </div >
+    </div>
   );
 }
