@@ -109,7 +109,7 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              Sign Up
+              Sign In
             </Button>
 
             <FormControlLabel
