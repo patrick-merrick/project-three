@@ -24,6 +24,6 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(27b56421-f981-44a1-a2eb-1aa9d8166fa7)'
     appType: 'webAppContainer'
-    WebAppName: 'DevConnect01'
+    WebAppName: 'Dev-tron3030'
     DockerNamespace: 'http://www.devconnected.org/'
     DockerRepository: 'myregistry.azurecr.io/nginx:latest'
