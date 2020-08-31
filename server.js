@@ -20,6 +20,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Define API routes here
+const routes = require("./controllers/memberController.js");
+
+app.use(routes);
+
+// Requiring our routes
+require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
 // Send every other request to the React app
 // Define any API routes before this runs
