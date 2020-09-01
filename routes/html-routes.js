@@ -34,4 +34,27 @@ module.exports = function (app) {
     console.log(req.user.email);
     res.render("movies", { layout: "main", email: req.user.email });
   });
+
+  // movie route loads movie.html
+  app.get("/movie", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/movie.html"));
+  });
+
+  // membership route loads membership.html
+  app.get("/membership", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/membership.html"));
+  });
+
+  // signup route loads signup.html
+  app.get("/signup", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+  // add a movie route add.html
+  app.get("/add", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/add.html"));
+  });
+  // view a movie route view.html
+  app.get("/view", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/view.html"));
+  });
 };
