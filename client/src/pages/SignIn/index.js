@@ -8,16 +8,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
-import Dashboard from "../Dashboard";
-import Help from '@material-ui/icons/Help';
-import {
-  BrowserRouter as , Route, 
-} from "react-router-dom";
+// import Dashboard from "../Dashboard";
+// import Help from '@material-ui/icons/Help';
+// import {
+//   BrowserRouter as , Route, 
+// } from "react-router-dom";
 
 
 
@@ -78,9 +77,9 @@ export default function SignInSide() {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in to DevConnect
-          </Typography>
+          <Typography align="center" component="h2" variant="h3" color="textPrimary">
+                DevConnect Sign In
+            </Typography>
           <form className={classes.form} noValidate>
 
             <Button
@@ -92,15 +91,7 @@ export default function SignInSide() {
             >
               GitHub
             </Button>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Google
-            </Button>
+            
             <Button
               type="submit"
               fullWidth
@@ -118,13 +109,17 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              <Link>
-                <Switch>
-                  <Route exact path="/" component={Dashboard} />
-                </Switch
-
-              </Link>
              Sign Up
+            </Button>
+
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+             Sign In
             </Button>
 
             <FormControlLabel
