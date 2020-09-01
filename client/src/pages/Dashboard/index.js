@@ -10,24 +10,27 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
+// import Badge from '@material-ui/core/Badge';
 // import Container from '@material-ui/core/Container';
 // import Grid from '@material-ui/core/Grid';
 // import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+// import NotificationsIcon from '@material-ui/icons/Notifications';
 // import { mainListItems, secondaryListItems } from './listItems';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+// import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import DeveloperGallery from '../DeveloperGallery';
-import EditProfile from '../EditProfile';
+import EditProfilePage from '../EditProfilePage';
+import PostAdPage from '../PostAdPage';
+import AdPostings from '../AdPostings';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -58,29 +61,30 @@ export const mainListItems = (
   <div>
       <ListItem button>
         <ListItemIcon>
-          <DashboardIcon />
+         <Link to="/DeveloperGallery"> <DashboardIcon /></Link>
         </ListItemIcon>
-        <Link to="/DeveloperGallery">Developer Gallery</Link>
+        <Link to="/DeveloperGallery"><ListItemText primary="Developer Gallery" /></Link>
+      </ListItem>
 
-      </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+         <Link to="/AdPostings"> <DashboardIcon /></Link>
         </ListItemIcon>
-        <ListItemText primary="Ad Postings" />
+        <Link to="/AdPostings"><ListItemText primary="Ad Postings" /></Link>
       </ListItem>
+
       <ListItem button>
         <ListItemIcon>
-          <PeopleIcon />
+        <Link to="/EditProfilePage"><PeopleIcon /></Link>
         </ListItemIcon>
-        {/* <ListItemText primary="Edit Profile" /> */}
-        <Link to="/EditProfile">Edit Profile</Link>
+        <Link to="/EditProfilePage"><ListItemText primary="Edit Profile" /></Link>
       </ListItem>
+
       <ListItem button>
         <ListItemIcon>
-          <BarChartIcon />
+        <Link to="/PostAdPage"><BarChartIcon /></Link>
         </ListItemIcon>
-        <ListItemText primary="Post Ad" />
+        <Link to="/PostAdPage"><ListItemText primary="Post Ad" /></Link>
       </ListItem>
   </div>
 );
@@ -223,11 +227,11 @@ export default function Dashboard() {
             >
               Dev Connect
           </Typography>
-            <IconButton color="inherit">
+            {/* <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
         </AppBar>
         <Drawer
@@ -247,16 +251,25 @@ export default function Dashboard() {
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
-
+        <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
         <Switch>
           <Route path="/DeveloperGallery">
             <DeveloperGallery />
           </Route>
-          <Route path="/EditProfile">
-            <EditProfile />
+          <Route path="/AdPostings">
+            <AdPostings />
+          </Route>
+          <Route path="/EditProfilePage">
+            <EditProfilePage />
+          </Route>
+          <Route path="/PostAdPage">
+            <PostAdPage/>
           </Route>
         </Switch>
+        </main>
       </Router>
+      
     </div >
   );
 }

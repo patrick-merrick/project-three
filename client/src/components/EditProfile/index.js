@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function StateTextFields() {
   const classes = useStyles();
-  const [name, setName] = React.useState('Cat in the Hat');
-  const handleChange = (event) => {
-    setName(event.target.value);
-  };
+  // const [name, setName] = React.useState('Cat in the Hat');
+  // const handleChange = (event) => {
+  //   setName(event.target.value);
+  // };
 
   return (
     <Grid justify="center">
@@ -64,6 +64,18 @@ export default function StateTextFields() {
             <TextField
               id="Skill Input 4"
               label="Enter Skill"
+              variant="outlined"
+            />
+          </div>
+          <div>
+            <TextField
+              id="Github"
+              label="Enter Github Username"
+              variant="outlined"
+            />
+            <TextField
+              id="LinkedIn"
+              label="Enter LinkedIn Name"
               variant="outlined"
             />
           </div>

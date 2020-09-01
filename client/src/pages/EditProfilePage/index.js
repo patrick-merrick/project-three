@@ -10,10 +10,7 @@ function EditProfilePage() {
   return (
     <Container justify="center" maxWidth="lg">
       <Grid>
-      <Typography align="center" component="h1" variant="h2" color="textPrimary">
-            Developer Gallery
-            </Typography>
-        <EditProfile/>
+        <EditProfile />
       </Grid>
     </Container>
   );
