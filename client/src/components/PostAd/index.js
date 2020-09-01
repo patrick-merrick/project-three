@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function StateTextFields() {
     const classes = useStyles();
-    const [name, setName] = React.useState('Cat in the Hat');
-    const handleChange = (event) => {
-        setName(event.target.value);
-    };
+    // const [name, setName] = React.useState('Cat in the Hat');
+    // const handleChange = (event) => {
+    //     setName(event.target.value);
+    // };
 
     return (
         <Grid>
