@@ -1,27 +1,21 @@
 const axios = require("axios");
-let userId = "jon";
+const BASEURL = "https://linkedin-id-search-v2.p.rapidapi.com/api/";
+// let userId = "joe-brimeyer-15398015";
 
 export default {
-  linkedInSearch: function () {
-    axios({
+  linkedInSearch: function (userId) {
+    return axios({
       method: "GET",
-      url: "https://linkedin-id-search-v2.p.rapidapi.com/api/" + { userId },
+      url: BASEURL + userId,
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "linkedin-id-search-v2.p.rapidapi.com",
         "x-rapidapi-key": "7984cc2852msh588e23d14de2975p1aac9ejsndf173a4e58c1",
         useQueryString: true,
       },
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    });
   },
 };
-
 // getRandomDog: function() {
 //   return axios.get("https://dog.ceo/api/breeds/image/random");
 // },
