@@ -1,18 +1,22 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import Container from "../../components/Container/Container";
 import API from "../../utils/API";
 
 class Profile extends Component {
   state = {
+    // result: {},
+    search: "",
     id: "",
     lastName: "",
     firstName: "",
+    headline: "",
     summary: "",
+    skills: "",
   };
 
   // When the component mounts, load the next user profile to be displayed
   componentDidMount() {
-    this.loadNextUser();
+    this.loadNextUser("joe-brimeyer-15398015");
   }
 
   handleBtnClick = (event) => {
@@ -26,14 +30,16 @@ class Profile extends Component {
     this.loadNextUser();
   };
 
-  loadNextUser = () => {
-    API.linkedInSearch()
+  loadNextUser = (userId) => {
+    API.linkedInSearch(userId)
       .then((res) =>
         this.setState({
-          id: res.data.id,
-          lastName: res.data.lastName,
-          firstName: res.data.firstName,
-          summary: res.data.summary,
+          id: res.results[0]._id,
+          lastName: res.results[0].basicInfo.lastName,
+          firstName: res.results[0].basicInfo.firstName,
+          headline: res.results[0].basicInfo.headline,
+          summary: res.results[0].basicInfo.summary,
+          skills: res.results[0].skills,
         })
       )
       .catch((err) => console.log(err));
@@ -41,7 +47,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <Router>
+      <Container>
         <div>
           <h1>Profile Page</h1>
           <h4>Profile Information:</h4>
@@ -49,21 +55,10 @@ class Profile extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
             odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
             quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
-            mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos.
-            Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-            Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
-            at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
-            ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
-            suscipit quis, luctus non, massa. Fusce ac turpis quis ligula
-            lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
-            tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-            per inceptos himenaeos. Nam nec ante.
+            mauris.
           </p>
         </div>
-      </Router>
+      </Container>
     );
   }
 }
