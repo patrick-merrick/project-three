@@ -1,8 +1,8 @@
 import React from "react";
 
 // import SignIn from "./pages/SignIn";
-import Profile from "./pages/Profile/index";
-// import Dashboard from "./pages/Dashboard";
+// import Profile from "./pages/Profile/index";
+import Dashboard from "./pages/Dashboard";
 
 // function SignIn() {
 //   return (
@@ -20,6 +20,6 @@ import Profile from "./pages/Profile/index";
 // export default App;
 
 function App() {
-  return <Profile />;
+  return <Dashboard />;
 }
 export default App;
