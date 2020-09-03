@@ -29,9 +29,11 @@ export default function SpacingGrid() {
 
     return (
         <Container className={classes.root} spacing={2}>
+            <br></br>
             <Typography align="center" component="h1" variant="h2" color="textPrimary">
                 Developer Gallery
             </Typography>
+            <br></br>
             <Grid item xs={12}>
                 <Grid container justify="center" spacing={spacing}>
                     {[0, 1, 2, 3, 4, 5].map((value) => (

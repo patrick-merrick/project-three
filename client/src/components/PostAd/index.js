@@ -45,7 +45,7 @@ export default function StateTextFields() {
                             id="outlined-full-width"
                             label="Job Description"
                             style={{ margin: 8 }}
-                            placeholder="Placeholder"
+                            placeholder="Job Description"
                             
                             margin="normal"
                             InputLabelProps={{
