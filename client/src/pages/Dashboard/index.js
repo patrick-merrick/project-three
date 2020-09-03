@@ -204,6 +204,7 @@ export default function Dashboard() {
         <AppBar
           position="absolute"
           className={clsx(classes.appBar, open && classes.appBarShift)}
+          style={{ background: '#455a64' }}
         >
           <Toolbar className={classes.toolbar}>
             <IconButton

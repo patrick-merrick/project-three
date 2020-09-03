@@ -7,61 +7,40 @@ import AdCard from '../../components/AdCard';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    icon: {
-        marginRight: theme.spacing(2),
-    },
-    heroContent: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(8, 0, 6),
-    },
-    heroButtons: {
-        marginTop: theme.spacing(4),
-    },
-    cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-    },
-    card: {
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    cardMedia: {
-        paddingTop: '56.25%', // 16:9
-    },
-    cardContent: {
+    root: {
         flexGrow: 1,
     },
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(6),
+    paper: {
+        height: 140,
+        width: 100,
+    },
+    control: {
+        padding: theme.spacing(2),
     },
 }));
 
-
-
-function AdPostingsPage() {
+export default function SpacingGrid() {
+    const [spacing, setSpacing] = React.useState(2);
     const classes = useStyles();
+
+    const handleChange = (event) => {
+        setSpacing(Number(event.target.value));
+    };
+
     return (
-        <Container justify="center" maxWidth="lg">
+        <Container className={classes.root} spacing={2}>
             <Typography align="center" component="h1" variant="h2" color="textPrimary">
                 Ad Postings
             </Typography>
-            <br></br>
-            <Grid justify="center" container spacing={4}>
-                <Grid align="center" xs={12} sm={6} md={4} >
-
-                    <AdCard />
-
-                </Grid>
-                <Grid align="center" xs={12} sm={6} md={4}>
-
-                    <AdCard />
-
+            <Grid item xs={12}>
+                <Grid container justify="center" spacing={spacing}>
+                    {[0, 1, 2, 3, 4, 5, 6, 7].map((value) => (
+                        <Grid key={value} item>
+                            <AdCard />
+                        </Grid>
+                    ))}
                 </Grid>
             </Grid>
         </Container>
     );
 }
-
-export default AdPostingsPage;
