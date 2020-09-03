@@ -1,7 +1,8 @@
-
 import React from "react";
 
 // import SignIn from "./pages/SignIn";
+=======
+// import Profile from "./pages/Profile/index";
 import Dashboard from "./pages/Dashboard";
 
 // function SignIn() {
