@@ -53,7 +53,7 @@ class Profile extends Component {
         this.setState({
           ...this.state,
           // [name]: value,
-          id: res.results[0]._id,
+          id: this.state.results[0]._id,
           lastName: res.results[0].basicInfo.lastName,
           firstName: res.results[0].basicInfo.firstName,
           headline: res.results[0].basicInfo.headline,
