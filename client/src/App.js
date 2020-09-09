@@ -9,7 +9,7 @@ import Dashboard from "./pages/Dashboard";
 //   return <h3> Sign in! </h3>;
 // }
 function App() {
-  let isLoggedIn = false;
+  let isLoggedIn = true;
   if (isLoggedIn) {
     return <Dashboard />;
   } else {
