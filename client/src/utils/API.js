@@ -1,3 +1,4 @@
+require("dotenv").config();
 const axios = require("axios");
 const BASEURL = "https://linkedin-id-search-v2.p.rapidapi.com/api/";
 // let userId = "joe-brimeyer-15398015";
