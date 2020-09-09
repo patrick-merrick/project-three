@@ -1,39 +1,64 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import Container from "../../components/Container/Container";
 import API from "../../utils/API";
+import SearchDeveloper from "../../components/SearchDeveloper/SearchDeveloper";
 
 class Profile extends Component {
   state = {
+    // result: {},
+    search: "",
     id: "",
     lastName: "",
     firstName: "",
+    headline: "",
     summary: "",
+    skills: "",
   };
-
+  // joe-brimeyer-15398015
   // When the component mounts, load the next user profile to be displayed
   componentDidMount() {
-    this.loadNextUser();
+    this.loadNextUser("jon");
   }
 
-  handleBtnClick = (event) => {
-    // Get the data-value of the clicked button
-    const btnType = event.target.attributes.getNamedItem("data-value").value;
-    // Clone this.state to the newState object
-    // We'll modify this object and use it to set our component's state
-    const newState = { ...this.state };
+  // handleBtnClick = (event) => {
+  //   // Get the data-value of the clicked button
+  //   const btnType = event.target.attributes.getNamedItem("data-value").value;
+  //   // Clone this.state to the newState object
+  //   // We'll modify this object and use it to set our component's state
+  //   const newState = { ...this.state };
 
-    this.setState(newState);
-    this.loadNextUser();
+  //   this.setState(newState);
+  //   this.loadNextUser();
+  // };
+  // handleInputChange = (event) => {
+  //   const value = event.target.value;
+  //   const name = event.target.name;
+  //   this.setState({
+  //     [name]: value,
+  //   });
+  // };
+
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.search);
+    this.loadNextUser(this.state.search);
   };
 
-  loadNextUser = () => {
-    API.linkedInSearch()
+  handleChange = (event) =>
+    this.setState({ ...this.state, search: event.target.value });
+
+  loadNextUser = (userId) => {
+    API.linkedInSearch(userId)
       .then((res) =>
         this.setState({
-          id: res.data.id,
-          lastName: res.data.lastName,
-          firstName: res.data.firstName,
-          summary: res.data.summary,
+          ...this.state,
+          // [name]: value,
+          id: this.state.results[0]._id,
+          lastName: res.results[0].basicInfo.lastName,
+          firstName: res.results[0].basicInfo.firstName,
+          headline: res.results[0].basicInfo.headline,
+          summary: res.results[0].basicInfo.summary,
+          skills: res.results[0].skills,
         })
       )
       .catch((err) => console.log(err));
@@ -41,40 +66,23 @@ class Profile extends Component {
 
   render() {
     return (
-      <Router>
+      <Container>
         <div>
+          <SearchDeveloper
+            handleInputChange={this.handleChange}
+            handleFormSubmit={this.handleFormSubmit}
+          />
           <h1>Profile Page</h1>
           <h4>Profile Information:</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
             odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
             quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
-            mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos.
-            Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-            Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
-            at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
-            ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
-            suscipit quis, luctus non, massa. Fusce ac turpis quis ligula
-            lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
-            tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-            per inceptos himenaeos. Nam nec ante.
+            mauris.
           </p>
         </div>
-      </Router>
+      </Container>
     );
   }
 }
 export default Profile;
-// function Profile() {
-//   loadSearch = () => {
-//     API.response
-//       .then((res) =>
-//         this.setState({
-//           image: res.data.message,
-//         })
-//       )
-//       .catch((err) => console.log(err));
-//   };
