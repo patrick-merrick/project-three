@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+process.env.API_KEY;
+process.env.DB_PASSWORD;
 
 // Requiring passport as we've configured it
 const passport = require("passport");
