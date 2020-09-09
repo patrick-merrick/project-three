@@ -1,11 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +18,30 @@ const useStyles = makeStyles({
 
 export default function MediaCard() {
   const classes = useStyles();
+  // state = {
+  //   adTitle: "",
+  //   jobDescription: "",
+  //   moreJobDescription: "",
+  //   email: "",
+  // };
 
+  // handleChange = (event) => {
+  //   let value = event.target.value;
+  //   const name = event.target.name;
+  //   this.setState({
+  //     [name]: value,
+  //   });
+  // };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   this.setState({
+  //     ...this.state,
+  //     adTitle: this.adTitle,
+  //     jobDescription: this.jobDescription,
+  //     moreJobDescription: this.moreJobDescription,
+  //     email: this.email,
+  //   });
+  // };
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -30,7 +53,7 @@ export default function MediaCard() {
             Job Description
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           More Job Description
+            More Job Description
           </Typography>
         </CardContent>
       </CardActionArea>
