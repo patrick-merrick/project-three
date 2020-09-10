@@ -1,6 +1,4 @@
 import React from "react";
-// import SignIn from "./pages/SignIn";
-import Profile from "./pages/Profile/index";
 import Dashboard from "./pages/Dashboard";
 // import Form from "./components/Form/index";
 // function SignIn() {

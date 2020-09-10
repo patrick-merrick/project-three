@@ -7,6 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import API from "../../utils/API";
+import SearchDeveloper from "../../components/SearchDeveloper/SearchDeveloper";
 
 const useStyles = makeStyles({
   root: {
@@ -25,12 +27,13 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://source.unsplash.com/random"
+          // image="https://source.unsplash.com/random"
           title="Developer Profile"
+          image={props.profilePicture}
+          
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h1">
-            {props.firstName} {props.lastName}
           </Typography>
           <Typography variant="body2" color="textPrimary" component="h2">
             {props.skills}
@@ -41,12 +44,12 @@ export default function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           GitHub
         </Button>
         <Button size="small" color="primary">
           LinkedIN
-        </Button>
+        </Button> */}
         <Button size="small" color="primary">
           Email
         </Button>

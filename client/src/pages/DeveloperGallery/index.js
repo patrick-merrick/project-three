@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     width: 100,
   },
   control: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(6),
   },
 }));
 
@@ -43,7 +43,13 @@ export default function SpacingGrid() {
         <Grid container justify="center" spacing={spacing}>
           {[0, 1, 2, 3, 4, 5].map((value) => (
             <Grid key={value} item>
-              <ProfileCard />
+              <ProfileCard 
+              profilePicture = "https://source.unsplash.com/random"
+              firstName = "Mark"
+              lastName = "Heil"
+              skills = "Lots of Skills"
+              summary = "Summary"
+              />
             </Grid>
           ))}
         </Grid>
