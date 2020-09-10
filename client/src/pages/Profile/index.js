@@ -6,6 +6,7 @@ import ProfileCard from "../../components/ProfileCard/index";
 import { Card } from "@material-ui/core";
 // import Form from "../../components/Form/index";
 
+// Start by setting the initial state
 class Profile extends Component {
   state = {
     result: {},
@@ -18,24 +19,25 @@ class Profile extends Component {
   componentDidMount() {
     this.loadNextUser("");
   }
-
+  // Run the LinkedIn API call
   loadNextUser = (userId) => {
     API.linkedInSearch(userId)
       .then((res) => this.setState({ ...this.state, result: res.data }))
       .catch((err) => console.log(err));
-    // console.log(result);
   };
-
+  // Update the state with the search input
   handleInputChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({ ...this.state, search: event.target.value, [name]: value });
-    console.log(value);
-    console.log(name);
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    this.loadNextUser(this.state.search);
+  };
+
+  render() {
     return (
       <Container>
         <div>
