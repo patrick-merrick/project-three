@@ -16,7 +16,7 @@ class Profile extends Component {
 
   // When the component mounts, load the next user profile to be displayed
   componentDidMount() {
-    this.loadNextUser("jon");
+    this.loadNextUser("");
   }
 
   loadNextUser = (userId) => {
