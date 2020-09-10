@@ -1,24 +1,18 @@
 import React from "react";
-
-import SignIn from "./pages/SignIn";
-
+// import SignIn from "./pages/SignIn";
 import Profile from "./pages/Profile/index";
-// import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 // import Form from "./components/Form/index";
 // function SignIn() {
 //   return <h3> Sign in! </h3>;
 // }
+
 function App() {
-  let isLoggedIn = true;
+  let isLoggedIn = false;
   if (isLoggedIn) {
-    return <Profile />;
+    return <Dashboard />;
   } else {
-    return <SignIn />;
+    return <Profile />;
   }
 }
 export default App;
-
-// function App() {
-//   return <SignIn />;
-// }
-// export default App;

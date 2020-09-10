@@ -30,14 +30,13 @@ export default function MediaCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h1">
-            Developer Name: {props.firstName} {props.lastName}
+            {props.firstName} {props.lastName}
           </Typography>
           <Typography variant="body2" color="textPrimary" component="h2">
-            MERN, Javascript, SQL
             {props.skills}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Summary: {props.summary}
+            {props.summary}
           </Typography>
         </CardContent>
       </CardActionArea>
