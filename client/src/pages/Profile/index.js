@@ -19,10 +19,11 @@ class Profile extends Component {
     this.loadNextUser("jon");
   }
 
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log(this.state.search);
-    this.loadNextUser(this.state.search);
+  loadNextUser = (userId) => {
+    API.linkedInSearch(userId)
+      .then((res) => this.setState({ ...this.state, result: res.data }))
+      .catch((err) => console.log(err));
+    // console.log(result);
   };
 
   handleInputChange = (event) => {
@@ -33,11 +34,10 @@ class Profile extends Component {
     console.log(name);
   };
 
-  loadNextUser = (userId) => {
-    API.linkedInSearch(userId)
-      .then((res) => this.setState({ result: res.data }))
-      .catch((err) => console.log(err));
-    // console.log(result);
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.search);
+    this.loadNextUser(this.state.search);
   };
 
   render() {
@@ -51,16 +51,16 @@ class Profile extends Component {
             handleFormSubmit={this.handleFormSubmit}
           />
 
-          <Card heading={this.state.result.userId || "Search for a developer"}>
-            {this.state.result.userId ? (
+          <Card heading={this.state.result.results || "Search for a developer"}>
+            {this.state.result.results ? (
               <ProfileCard
                 id={this.state.result.results[0]._id}
-                firstName={this.state.result.results[0].firstName}
-                lastName={this.state.result.results[0].lastName}
-                headline={this.state.result.results[0].headline}
+                firstName={this.state.result.results[0].basicInfo.firstName}
+                lastName={this.state.result.results[0].basicInfo.lastName}
+                headline={this.state.result.results[0].basicInfo.headline}
                 skills={this.state.result.results[0].skills}
                 location={this.state.result.results[0].location}
-                summary={this.state.result.results[0].summary}
+                summary={this.state.result.results[0].basicInfo.summary}
               />
             ) : (
               <h3>No Results to Display</h3>
