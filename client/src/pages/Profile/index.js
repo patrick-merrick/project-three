@@ -49,12 +49,12 @@ class Profile extends Component {
           <Card heading={this.state.result.results || "Search for a developer"}>
             {this.state.result.results ? (
               <ProfileCard
-                id={this.state.result.results[0]._id}
+                // id={this.state.result.results[0]._id}
                 firstName={this.state.result.results[0].basicInfo.firstName}
                 lastName={this.state.result.results[0].basicInfo.lastName}
                 headline={this.state.result.results[0].basicInfo.headline}
-                skills={this.state.result.results[0].skills}
-                location={this.state.result.results[0].location}
+                // skills={this.state.result.results[0].skills}
+                location={this.state.result.results[0].basicInfo.location}
                 summary={this.state.result.results[0].basicInfo.summary}
               />
             ) : (
@@ -68,32 +68,3 @@ class Profile extends Component {
 }
 
 export default Profile;
-
-// handleBtnClick = (event) => {
-//   // Get the data-value of the clicked button
-//   const btnType = event.target.attributes.getNamedItem("data-value").value;
-//   // Clone this.state to the newState object
-//   // We'll modify this object and use it to set our component's state
-//   const newState = { ...this.state };
-
-//   this.setState(newState);
-//   this.loadNextUser();
-// };
-// handleInputChange = (event) => {
-//   const value = event.target.value;
-//   const name = event.target.name;
-//   this.setState({
-//     [name]: value,
-//   });
-// };
-
-// ...this.state,
-// [name]: value,
-// id: this.state.result[0]._id,
-// lastName: res.results[0].basicInfo.lastName,
-// firstName: res.results[0].basicInfo.firstName,
-// headline: res.results[0].basicInfo.headline,
-// summary: res.results[0].basicInfo.summary,
-// skills: res.results[0].skills,
-// })
-// )
