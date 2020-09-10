@@ -36,11 +36,6 @@ class Profile extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.search);
-    this.loadNextUser(this.state.search);
-  };
-
-  render() {
     return (
       <Container>
         <div>
