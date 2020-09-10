@@ -11,13 +11,16 @@ import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
+// import Link from "@material-ui/core/Link";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import SignUp from "../SignUp";
 // import Dashboard from "../Dashboard";
 // import Help from '@material-ui/icons/Help';
 // import {
 //   BrowserRouter as , Route,
 // } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -68,76 +71,88 @@ export default function SignInSide() {
   const classes = useStyles();
 
   return (
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography
-            align="center"
-            component="h2"
-            variant="h3"
-            color="textPrimary"
-          >
-            DevConnect Sign In
-          </Typography>
-          <form className={classes.form} noValidate>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
+    <Router>
+      <Grid container component="main" className={classes.root}>
+        <CssBaseline />
+        <Grid item xs={false} sm={4} md={7} className={classes.image} />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography
+              align="center"
+              component="h2"
+              variant="h3"
+              color="textPrimary"
             >
-              GitHub
-            </Button>
+              DevConnect Sign In
+            </Typography>
+            <form className={classes.form} noValidate>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                GitHub
+              </Button>
 
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              LinkedIn
-            </Button>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                LinkedIn
+              </Button>
 
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign Up
-            </Button>
+              <ListItem button>
+                <Link to="/SignUp">
+                  <ListItemText primary="SignUp" />
+                </Link>
+              </ListItem>
 
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              {/* <Link to="/SignIn"></Link>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                {/* <Link to="/SignIn"></Link>
               <Link to="/SignIn"></Link> */}
-              Sign In
-            </Button>
+                Sign In
+              </Button>
 
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
 
-            <Box mt={5}>
-              <Copyright />
-            </Box>
-          </form>
-        </div>
+              <Box mt={5}>
+                <Copyright />
+              </Box>
+            </form>
+          </div>
+        </Grid>
       </Grid>
-    </Grid>
+      <Switch>
+        {/* <Route path="/DeveloperGallery">
+          <DeveloperGallery />
+        </Route>
+        <Route path="/AdPostings">
+          <AdPostings />
+        </Route>
+        <Route path="/EditProfilePage">
+          <EditProfilePage />
+        </Route> */}
+        <Route path="/SignUp">
+          <SignUp />
+        </Route>
+      </Switch>
+    </Router>
   );
 }

@@ -58,28 +58,27 @@ module.exports = function (app) {
       });
     }
   });
-  // POST route for saving a new post
-  // app.post("/api/new", (req, res) => {
-  //   const movies = req.body;
-  //   const routeName = movies.name.replace(/\s+/g, "").toLowerCase();
-  //   console.log(movies);
-  //   db.Movies.create({
-  //     routeName: routeName,
-  //     name: movies.name,
-  //     catharsis: movies.catharsis,
-  //     trigger_rating: movies.trigger,
-  //     comments: movies.comments
-  //   });
-  //   res.status(204).end();
-  // });
-  // Get route for returning posts of a specific category
-  // app.get("/api/views/:routeName", (req, res) => {
-  //   db.Movies.findOne({
-  //     where: {
-  //       routeName: req.params.routeName
-  //     }
-  //   }).then(dbPost => {
-  //     res.json(dbPost);
-  //   });
-  // });
+  // POST route for saving a new ad
+  app.post("/api/new", (req, res) => {
+    const ad = req.body;
+    const routeName = ad.name.replace(/\s+/g, "").toLowerCase();
+    console.log(ad);
+    db.Ad.create({
+      routeName: routeName,
+      name: ad.name,
+      comments: ad.comments
+    });
+    res.status(204).end();
+  });
+
+  Get route for returning posts of a specific category
+  app.get("/api/views/:routeName", (req, res) => {
+    db.Ad.findOne({
+      where: {
+        routeName: req.params.routeName
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
 };

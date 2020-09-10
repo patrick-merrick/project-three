@@ -27,14 +27,12 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          // image="https://source.unsplash.com/random"
+          image="https://source.unsplash.com/random"
           title="Developer Profile"
           image={props.profilePicture}
-          
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h1">
-          </Typography>
+          <Typography gutterBottom variant="h5" component="h1"></Typography>
           <Typography variant="body2" color="textPrimary" component="h2">
             {props.skills}
           </Typography>

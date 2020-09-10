@@ -11,7 +11,7 @@ function SearchDeveloper(props) {
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search For a Developer"
+          placeholder="Enter your LinkedIn ID"
           id="search"
         />
         <br />
