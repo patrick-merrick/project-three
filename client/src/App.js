@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile/index";
 import SignIn from "./pages/SignIn/index";
 // import Form from "./components/Form/index";
@@ -10,7 +10,7 @@ import SignIn from "./pages/SignIn/index";
 function App() {
   let isLoggedIn = true;
   if (isLoggedIn) {
-    return <Dashboard />;
+    return <Profile />;
   } else {
     return <SignIn />;
   }
