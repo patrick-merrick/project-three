@@ -38,19 +38,19 @@ export default function StateTextFields() {
           <br></br>
           <div>
             <Typography component="h1" variant="h2" color="textPrimary">
-              Edit Profile
+              Create Profile
             </Typography>
           </div>
           <br></br>
-          <div>
+          {/* <div>
             <TextField
               id="Github Input"
               label="Enter Github ID"
               variant="outlined"
             />
             <ImportButton />
-          </div>
-          <br></br>
+          </div> */}
+          {/* <br></br>
           <div>
             <TextField
               id="LinkedIn"
@@ -58,7 +58,7 @@ export default function StateTextFields() {
               variant="outlined"
             />
             <ImportButton />
-          </div>
+          </div> */}
           <br></br>
           <div>
             <div>
@@ -75,15 +75,15 @@ export default function StateTextFields() {
             </div>
             <div>
               <TextField
-                id="Headline"
-                label="Enter Your Headline"
+                id="Location"
+                label="Enter Your Location"
                 variant="outlined"
               />
             </div>
             <div>
               <TextField
-                id="Location"
-                label="Enter Your Location"
+                id="Headline"
+                label="Enter Your Headline"
                 variant="outlined"
               />
             </div>
@@ -110,6 +110,13 @@ export default function StateTextFields() {
                 label="Summary"
                 placeholder="Summary"
                 multiline
+                variant="outlined"
+              />
+            </div>
+            <div>
+              <TextField
+                id="email"
+                label="Enter Your Email"
                 variant="outlined"
               />
             </div>
