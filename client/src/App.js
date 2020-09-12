@@ -1,4 +1,5 @@
 import React from "react";
+
 import Dashboard from "./pages/Dashboard";
 // import Profile from "./pages/Profile/index";
 // import SignIn from "./pages/SignIn/index";
@@ -8,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 // }
 
 function App() {
+
   return <Dashboard />
 }
 export default App;
