@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import SubmitButton from '../SubmitButton';
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,8 +30,8 @@ export default function StateTextFields() {
             <Paper className={classes.paper}>
                 <form className={classes.root} noValidate autoComplete="off">
                     <div>
-                        <Typography  component="h1" variant="h2" color="textPrimary">
-                            Post Ad
+                        <Typography component="h1" variant="h2" color="textPrimary">
+                            Post Project
                     </Typography>
                     </div>
                     <div >
@@ -46,7 +47,7 @@ export default function StateTextFields() {
                             label="Job Description"
                             style={{ margin: 8 }}
                             placeholder="Job Description"
-                            
+
                             margin="normal"
                             InputLabelProps={{
                                 shrink: true,
@@ -54,6 +55,16 @@ export default function StateTextFields() {
                             variant="outlined"
                         />
                     </div>
+                    <div>
+                        <TextField
+                            id="email"
+                            label="Enter Your Email"
+                            variant="outlined"
+                        />
+                    </div>
+                    <div>
+            <SubmitButton />
+          </div>
                 </form>
             </Paper>
         </Grid>

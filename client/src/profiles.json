@@ -12,33 +12,30 @@
     "skill3": " React",
     "email": "mark.heil1122@gmail.com"
   },
-
-
-
-
-
-
-
-
-
-
-
-
-  
   {
     "id": 2,
     "firstName": "Joe",
-    "lastName": "BriMeyer",
+    "lastName": "Brimeyer",
     "profilePicture": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-    "skills": "Boss SKills",
-    "summary": "Joe's Summary"
+    "city": "Seattle",
+    "headline": "Full Stack Web Developer",
+    "skill1": "Node",
+    "skill2": " Javascript",
+    "skill3": " React",
+    "summary": "Joe's Summary",
+    "email": "joe@gmail.com"
   },
   {
     "id": 3,
     "firstName": "Patrick",
     "lastName": "Merrick",
     "profilePicture": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
-    "skills": "Dude Skills",
-    "summary": "Patrick's Summary"
+    "city": "Seattle",
+    "headline": "Full Stack Web Developer",
+    "skill1": "Azure",
+    "skill2": " Javascript",
+    "skill3": " React",
+    "summary": "Patrick's Summary",
+    "email": "Patrick@gmail.com"
   }
 ]
