@@ -1,19 +1,19 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import EditProfile from '../../components/EditProfile';
+import CreateProfile from '../../components/CreateProfile';
 
 
-function EditProfilePage() {
+function CreateProfilePage() {
 
   return (
     <Container justify="center" maxWidth="lg">
       <Grid>
-        <EditProfile />
+        <CreateProfile />
       </Grid>
     </Container>
   );
 };
 
-export default EditProfilePage;
+export default CreateProfilePage;
 

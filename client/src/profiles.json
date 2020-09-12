@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "firstName": "Mark",
+    "lastName": "Heil",
+    "profilePicture": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+    "city": "Seattle",
+    "headline": "Front End Web Developer",
+    "summary": "Mark's Summary",
+    "skill1": "HTML",
+    "skill2": " Javascript",
+    "skill3": " React",
+    "email": "mark.heil1122@gmail.com"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  {
+    "id": 2,
+    "firstName": "Joe",
+    "lastName": "BriMeyer",
+    "profilePicture": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
+    "skills": "Boss SKills",
+    "summary": "Joe's Summary"
+  },
+  {
+    "id": 3,
+    "firstName": "Patrick",
+    "lastName": "Merrick",
+    "profilePicture": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
+    "skills": "Dude Skills",
+    "summary": "Patrick's Summary"
+  }
+]

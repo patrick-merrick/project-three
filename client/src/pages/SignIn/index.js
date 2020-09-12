@@ -89,7 +89,7 @@ export default function SignInSide() {
               DevConnect Sign In
             </Typography>
             <form className={classes.form} noValidate>
-              <Button
+              {/* <Button
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -97,7 +97,7 @@ export default function SignInSide() {
                 className={classes.submit}
               >
                 GitHub
-              </Button>
+              </Button> */}
 
               <Button
                 type="submit"
@@ -109,11 +109,15 @@ export default function SignInSide() {
                 LinkedIn
               </Button>
 
-              <ListItem button>
-                <Link to="/SignUp">
-                  <ListItemText primary="SignUp" />
-                </Link>
-              </ListItem>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                Sign Up
+              </Button>
 
               <Button
                 type="submit"
@@ -122,8 +126,6 @@ export default function SignInSide() {
                 color="primary"
                 className={classes.submit}
               >
-                {/* <Link to="/SignIn"></Link>
-              <Link to="/SignIn"></Link> */}
                 Sign In
               </Button>
 
