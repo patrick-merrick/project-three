@@ -9,57 +9,33 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 275,
+    minWidth: 275,
+    margin: 6,
   },
   media: {
     height: 140,
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   const classes = useStyles();
-  // state = {
-  //   adTitle: "",
-  //   jobDescription: "",
-  //   moreJobDescription: "",
-  //   email: "",
-  // };
-
-  // handleChange = (event) => {
-  //   let value = event.target.value;
-  //   const name = event.target.name;
-  //   this.setState({
-  //     [name]: value,
-  //   });
-  // };
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   this.setState({
-  //     ...this.state,
-  //     adTitle: this.adTitle,
-  //     jobDescription: this.jobDescription,
-  //     moreJobDescription: this.moreJobDescription,
-  //     email: this.email,
-  //   });
-  // };
+ 
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h1">
-            Ad Title
-          </Typography>
-          <Typography variant="body2" color="textPrimary" component="h2">
-            Job Description
+          {props.adTitle}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            More Job Description
+          {props.adDescription}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Email
+        {props.adEmail}
         </Button>
       </CardActions>
     </Card>

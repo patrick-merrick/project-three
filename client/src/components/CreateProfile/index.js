@@ -5,7 +5,7 @@ import UploadButton from '../UploadButton';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 // import Button from '@material-ui/core/Button';
-import ImportButton from '../ImportButton';
+// import ImportButton from '../ImportButton';
 import SubmitButton from '../SubmitButton';
 
 
@@ -37,7 +37,11 @@ export default function StateTextFields() {
         <form className={classes.root} noValidate autoComplete="off">
           <br></br>
           <div>
-            <Typography component="h1" variant="h2" color="textPrimary">
+            <Typography 
+            align="center"
+            component="h1" 
+            variant="h2" 
+            color="textPrimary">
               Create Profile
             </Typography>
           </div>

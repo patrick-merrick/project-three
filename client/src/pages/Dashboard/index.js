@@ -21,8 +21,9 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import DeveloperGallery from '../DeveloperGallery';
 import CreateProfilePage from '../CreateProfilePage';
 import PostAdPage from '../PostAdPage';
-import AdPostings from '../AdPostings';
+import ProjectBoard from '../ProjectBoard';
 import SignIn from '../SignIn';
+import Profile from "../Profile";
 
 import {
   BrowserRouter as Router,
@@ -61,13 +62,6 @@ export const mainListItems = (
 
       <ListItem button>
         <ListItemIcon>
-         <Link to="/AdPostings"> <DashboardIcon /></Link>
-        </ListItemIcon>
-        <Link to="/AdPostings"><ListItemText primary="Ad Postings" /></Link>
-      </ListItem>
-
-      <ListItem button>
-        <ListItemIcon>
         <Link to="/CreateProfilePage"><PeopleIcon /></Link>
         </ListItemIcon>
         <Link to="/CreateProfilePage"><ListItemText primary="Create Profile" /></Link>
@@ -75,9 +69,23 @@ export const mainListItems = (
 
       <ListItem button>
         <ListItemIcon>
+         <Link to="/ProjectBoard"> <DashboardIcon /></Link>
+        </ListItemIcon>
+        <Link to="/ProjectBoard"><ListItemText primary="Project Board" /></Link>
+      </ListItem>
+
+      <ListItem button>
+        <ListItemIcon>
         <Link to="/PostAdPage"><BarChartIcon /></Link>
         </ListItemIcon>
-        <Link to="/PostAdPage"><ListItemText primary="Post Ad" /></Link>
+        <Link to="/PostAdPage"><ListItemText primary="Post Project" /></Link>
+      </ListItem>
+
+      <ListItem button>
+        <ListItemIcon>
+         <Link to="/Profile"> <DashboardIcon /></Link>
+        </ListItemIcon>
+        <Link to="/Profile"><ListItemText primary="Profile" /></Link>
       </ListItem>
   </div>
 );
@@ -219,13 +227,14 @@ export default function Dashboard() {
               <MenuIcon />
             </IconButton>
             <Typography
+              align="center"
               component="h1"
-              variant="h6"
+              variant="h4"
               color="inherit"
               noWrap
               className={classes.title}
-            >
-              Dev Connect
+            > 
+               Dev Connect
           </Typography>
             {/* <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -257,8 +266,8 @@ export default function Dashboard() {
           <Route path="/DeveloperGallery">
             <DeveloperGallery />
           </Route>
-          <Route path="/AdPostings">
-            <AdPostings />
+          <Route path="/ProjectBoard">
+            <ProjectBoard />
           </Route>
           <Route path="/CreateProfilePage">
             <CreateProfilePage />
@@ -268,6 +277,9 @@ export default function Dashboard() {
           </Route>
           <Route path="/SignIn">
             <SignIn/>
+          </Route>
+          <Route path="/Profile">
+            <Profile/>
           </Route>
         </Switch>
         </main>

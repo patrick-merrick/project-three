@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "adTitle": "Need a blog page",
+    "adDescription": "Looking to hire a developer to write up a custom blog page for me to use",
+    "adEmail": "blogger@email.com"
+  },
+  {
+    "id": 2,
+    "adTitle": "React Component",
+    "adDescription": "I need someone to code a number of React components",
+    "adEmail": "Devdude@email.com"
+  },
+  {
+    "id": 3,
+    "adTitle": "Looking to hire",
+    "adDescription": "Looking to hire a Full-Stack Web Developer",
+    "adEmail": "Recruiter@techplace.com"
+  },
+  {
+    "id": 4,
+    "adTitle": "Help with Navbar",
+    "adDescription": "New developer needing help with my navbar",
+    "adEmail": "Devguy@email.com"
+  },
+  {
+    "id": 5,
+    "adTitle": "Help with OAuth",
+    "adDescription": "Looking to get help setting up an OAuth for my app",
+    "adEmail": "Dev@email.com"
+  },
+  {
+    "id": 6,
+    "adTitle": "Complete Website",
+    "adDescription": "I am not a coder and looking for someone to write me a complete website",
+    "adEmail": "JaneSmith@email.com"
+  }
+]

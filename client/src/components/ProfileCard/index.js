@@ -13,10 +13,13 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    minWidth: 250,
+    margin: 10,
   },
   media: {
     height: 140,
   },
+  
 });
 
 export default function MediaCard(props) {
